@@ -1,6 +1,7 @@
 package com.bizforo.sfgdi;
 
 import com.bizforo.sfgdi.config.SfgConfiguration;
+import com.bizforo.sfgdi.config.SfgConstructorConfig;
 import com.bizforo.sfgdi.controllers.*;
 import com.bizforo.sfgdi.datasource.FakeDataSource;
 import com.bizforo.sfgdi.services.PrototypeBean;
@@ -65,6 +66,11 @@ public class SfgDiApplication {
 						+ sfgConfiguration.getPassword() + " | "
 						+ sfgConfiguration.getJdbcurl());
 
+		System.out.println("-------- Constructor Binding: ");
+		SfgConstructorConfig sfgConstructorConfig = ctx.getBean(SfgConstructorConfig.class);
+		System.out.println(sfgConstructorConfig.getUsername() + " | "
+						+ sfgConstructorConfig.getPassword() + " | "
+						+ sfgConstructorConfig.getJdbcurl());
 
 	}
 

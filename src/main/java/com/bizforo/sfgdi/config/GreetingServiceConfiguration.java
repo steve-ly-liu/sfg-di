@@ -6,10 +6,12 @@ import com.bizforo.sfgdi.services.*;
 import gurn.springframework.pets.PetService;
 import gurn.springframework.pets.PetServiceFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.*;
 import org.springframework.stereotype.Component;
 
 //@PropertySource("classpath:datasource.properties")
+@EnableConfigurationProperties(SfgConstructorConfig.class)
 @ImportResource("classpath:sfgdi-config.xml")
 @Configuration
 public class GreetingServiceConfiguration {
