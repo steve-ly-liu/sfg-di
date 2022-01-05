@@ -1,0 +1,5 @@
+com:
+  bizforo:
+    username: YMLDevUser
+    password: YMLDevPassword
+    jdbcurl: YMLDevJdbcUrl

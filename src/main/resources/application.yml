@@ -1,6 +1,6 @@
 spring:
-  profile:
-    active: EN, cat
+  profiles:
+    active: DEV,CN,dog
 com:
   bizforo:
     username: YMLUser
