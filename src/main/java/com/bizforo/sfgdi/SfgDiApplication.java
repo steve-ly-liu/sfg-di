@@ -1,5 +1,6 @@
 package com.bizforo.sfgdi;
 
+import com.bizforo.sfgdi.config.SfgConfiguration;
 import com.bizforo.sfgdi.controllers.*;
 import com.bizforo.sfgdi.datasource.FakeDataSource;
 import com.bizforo.sfgdi.services.PrototypeBean;
@@ -54,8 +55,15 @@ public class SfgDiApplication {
 
 		/* print properties */
 		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+		System.out.println("--------- Fake data source: ");
 		System.out.println(fakeDataSource.getUsername() + " | "
 				+ fakeDataSource.getPassword() + " | " + fakeDataSource.getJdbcurl());
+
+		System.out.println("-------- Config Props Bean:");
+		SfgConfiguration sfgConfiguration = ctx.getBean(SfgConfiguration.class);
+		System.out.println(sfgConfiguration.getUsername() + " | "
+						+ sfgConfiguration.getPassword() + " | "
+						+ sfgConfiguration.getJdbcurl());
 
 
 	}

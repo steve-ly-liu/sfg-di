@@ -15,14 +15,12 @@ import org.springframework.stereotype.Component;
 public class GreetingServiceConfiguration {
 
     @Bean
-    FakeDataSource fakeDataSource(@Value("${com.bizforo.username}") String username,
-                                  @Value("${com.bizforo.password}") String password,
-                                  @Value("${com.bizforo.jdbcurl}") String jdbcurl) {
+    FakeDataSource fakeDataSource(SfgConfiguration sfgConfiguration) {
 
         FakeDataSource fakeDataSource = new FakeDataSource();
-        fakeDataSource.setUsername(username);
-        fakeDataSource.setPassword(password);
-        fakeDataSource.setJdbcurl(jdbcurl);
+        fakeDataSource.setUsername(sfgConfiguration.getUsername());
+        fakeDataSource.setPassword(sfgConfiguration.getPassword());
+        fakeDataSource.setJdbcurl(sfgConfiguration.getJdbcurl());
         return fakeDataSource;
 
 
