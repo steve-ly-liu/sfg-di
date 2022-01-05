@@ -1,0 +1,8 @@
+spring:
+  profile:
+    active: EN, cat
+com:
+  bizforo:
+    username: YMLUser
+    password: YMLPassword
+    jdbcurl: YMLJdbcUrl
