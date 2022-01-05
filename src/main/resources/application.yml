@@ -1,8 +1,17 @@
 spring:
   profiles:
-    active: DEV,CN,dog
+    active: Prod,CN,dog
 com:
   bizforo:
     username: YMLUser
     password: YMLPassword
     jdbcurl: YMLJdbcUrl
+---
+spring:
+  profiles: Prod
+com:
+  bizforo:
+    username: YMLProdUser
+    password: YMLProdPassword
+    jdbcurl: YMLProdJdbcUrl
+
