@@ -5,6 +5,7 @@ import com.bizforo.sfgdi.services.*;
 import gurn.springframework.pets.PetService;
 import gurn.springframework.pets.PetServiceFactory;
 import org.springframework.context.annotation.*;
+import org.springframework.stereotype.Component;
 
 @ImportResource("classpath:sfgdi-config.xml")
 @Configuration
@@ -63,4 +64,9 @@ public class GreetingServiceConfiguration {
     I18NGreetingServiceImpl i18NEnglishGreetingServiceImpl(GreetingRepositoryFactory greetingRepositoryFactory) {
         return new I18NGreetingServiceImpl(greetingRepositoryFactory.getGreeting("EN"));
     }
+
+/*    @Bean
+    SingletonBean singletonBean() {
+        return new SingletonBean();
+    }*/
 }
