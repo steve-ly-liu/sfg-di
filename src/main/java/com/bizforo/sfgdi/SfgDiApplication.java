@@ -1,6 +1,7 @@
 package com.bizforo.sfgdi;
 
 import com.bizforo.sfgdi.controllers.*;
+import com.bizforo.sfgdi.datasource.FakeDataSource;
 import com.bizforo.sfgdi.services.PrototypeBean;
 import com.bizforo.sfgdi.services.SingletonBean;
 import org.springframework.boot.SpringApplication;
@@ -50,6 +51,11 @@ public class SfgDiApplication {
 		System.out.println(prototypeBean1.getMyScope());
 		PrototypeBean prototypeBean2 = ctx.getBean(PrototypeBean.class);
 		System.out.println(prototypeBean2.getMyScope());
+
+		/* print properties */
+		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+		System.out.println(fakeDataSource.getUsername() + " | "
+				+ fakeDataSource.getPassword() + " | " + fakeDataSource.getJdbcurl());
 
 
 	}
